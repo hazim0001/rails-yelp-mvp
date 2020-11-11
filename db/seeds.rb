@@ -4,4 +4,13 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first
+
+100.times do
+  Restaurant.create(
+    name: Faker::Artist.name,
+    phone_number: Faker::Company.french_siren_number,
+    address: Faker::Address.street_name,
+    category: %w[chinese italian japanese french belgian].sample
+  )
+end
